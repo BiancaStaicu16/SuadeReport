@@ -17,15 +17,19 @@ git clone https://github.com/your-username/suade-report.git
 ```
 pip3 install virtualenv
 ```
-
-3. Then activate it with:
-
-```
-virtualenv ./venv  # Windows
-source venv/bin/activate  # Linux
+3. Create virtual environment:
+``` 
+python -m venv .venv
 ```
 
-4. Install python dependencies:
+4. Then activate it with:
+
+```
+.venv\Scripts\activate.bat  # Windows
+. .venv/bin/activate  # Linux
+```
+
+5. Install python dependencies:
 
 ```
 python3 -m pip install -r requirements.txt
@@ -42,6 +46,13 @@ uvicorn main:app
 2. Open your browser and navigate to http://localhost:8000 to access the application.
 
 3. The API provides a /get_report endpoint that accepts a date parameter in the format of YYYY-MM-DD. It returns a report for the specified date.
+
+## ⚙️ Run Tests
+To run the tests for the project:
+
+```
+pytest tests.py
+```
 
 ## 🧑‍💻 Development
 The Suade Report project is built using the following technologies:
